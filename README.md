@@ -141,3 +141,9 @@ Customer Data
 - Deploy dashboard to Streamlit Cloud or AWS
 
 - Implement cluster-based marketing recommendations
+
+**Screenshot**
+1.link: https://github.com/ArchiSaini18/ML_Clusting-Customer-Segmentation-using-KMeansClustering/blob/main/Screenshot%202026-01-14%20082835.png
+2.link : https://github.com/ArchiSaini18/ML_Clusting-Customer-Segmentation-using-KMeansClustering/blob/main/Screenshot%202026-01-14%20082752.png
+3. link: https://github.com/ArchiSaini18/ML_Clusting-Customer-Segmentation-using-KMeansClustering/blob/main/Screenshot%202026-01-14%20082810.png
+4. link: https://github.com/ArchiSaini18/ML_Clusting-Customer-Segmentation-using-KMeansClustering/blob/main/Screenshot%202026-01-14%20082822.png
