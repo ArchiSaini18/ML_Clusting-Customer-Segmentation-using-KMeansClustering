@@ -1,51 +1,65 @@
 🛍️ **Customer Segmentation using K-Means Clustering**
 
 This project analyzes customer behavior and groups customers into meaningful segments using the K-Means clustering algorithm.
-The goal is to help businesses understand customer purchasing patterns, identify high-value and at-risk customers, and design data-driven marketing strategies through an interactive Streamlit dashboard.
+The goal is to help businesses understand customer purchasing patterns, identify high-value and low-value customers, and support data-driven marketing decisions through an interactive Streamlit dashboard.
 
 📌 **Project Overview**
 
 In this project, we:
 
--Built a secure Streamlit application with user authentication (login & signup).
+- Built a secure Streamlit application with login and signup authentication using a CSV-based user database.
 
 - Loaded and preprocessed customer data by:
 
-   - Handling missing values
+- Handling missing values
 
-   - Engineering new features such as Age, Total Spending, Customer Tenure, and Campaign Acceptance
+- Engineering new features such as Age and Total Spending
 
-- Performed exploratory data analysis (EDA) to study distributions, correlations, and customer behavior.
+- Applied feature scaling using StandardScaler to normalize customer attributes.
 
-- Scaled numerical features using StandardScaler.
+- Implemented K-Means clustering to segment customers into 6 distinct clusters based on purchasing behavior.
 
-- Applied K-Means clustering to segment customers into 6 distinct groups.
+- Used the Elbow Method (WCSS) to justify the optimal number of clusters.
 
-- Selected the number of clusters using the Elbow Method (WCSS).
+- Created cluster summaries to understand average customer behavior per segment.
 
-- Created interpretable cluster profiles (e.g., premium customers, budget shoppers, dormant users).
+- Developed a real-time cluster prediction system that assigns new customers to the appropriate segment.
 
-- Developed a real-time customer cluster prediction tool to assign new customers to the right segment.
+- Visualized customer distributions and comparisons using interactive histograms and charts.
 
-- Visualized results using interactive charts, heatmaps, and comparison plots.
-
-- Analyzed marketing campaign performance across customer segments.
+- Enabled profile comparison between user input and the overall dataset.
 
 📂 **Dataset**
 
-Source: Customer marketing and transaction dataset (customer_segmentation.csv)
+- Source: Customer marketing and transaction dataset (customer_segmentation.csv)
 
-**Typical Features**:
+**Typical Features**
 
-- Demographics: Age, Income, Education, Marital Status
+- Demographics:
 
-- Behavioral: Web Purchases, Store Purchases, Web Visits, Recency
+- Age
 
-- Spending: Wines, Fruits, Meat, Fish, Sweets, Gold Products
+- Income
 
-- Campaign Responses
+**Behavioral**:
 
-- Target: Unsupervised learning (no predefined labels)
+- Number of Web Purchases
+
+- Number of Store Purchases
+
+- Web Visits per Month
+
+- Recency (days since last purchase)
+
+**Spending**:
+
+- Wines, Fruits, Meat, Fish, Sweets, Gold Products
+
+- Total Spending (engineered feature)
+
+**Target**:
+
+- Unsupervised learning (no predefined labels)
 
 🛠️ **Technologies Used**
 
@@ -53,60 +67,56 @@ Source: Customer marketing and transaction dataset (customer_segmentation.csv)
 
 - Streamlit – interactive dashboard & UI
 
-- Pandas, NumPy – data manipulation & feature engineering
+- Pandas, NumPy – data handling & feature engineering
 
-- Scikit-learn – scaling, K-Means clustering
+- Scikit-learn – feature scaling & K-Means clustering
 
-- Matplotlib & Seaborn – visual analytics
+- Matplotlib & Seaborn – data visualization
 
-- CSV-based user authentication for login/signup
+- CSV-based authentication system – login & signup
 
 📊 **Model Selection & Evaluation**
 
-- Elbow Method (WCSS) used to identify the optimal number of clusters.
+- Elbow Method (WCSS) used to determine the optimal number of clusters.
 
-**Chosen number of clusters balances:**
+- Final number of clusters selected based on:
 
-  - Statistical compactness
+- Compactness of clusters
 
-  - Clear behavioral separation
+- Clear separation of customer behaviors
 
-  - Business interpretability
+- Business interpretability of segments
 
-  **Clusters validated through:**
+**Clusters validated through**:
 
-- Feature distributions
+- Average spending and income levels
 
-- Spending and engagement patterns
+- Purchase frequency patterns
 
-- Campaign response behavior
+- Recency and engagement behavior
 
 📈 **Visualizations**
 
 - Customer age, income, and spending distributions
 
-- Correlation heatmaps between income, spending, and purchase behavior
+- User input vs dataset comparison (highlighted with reference lines)
 
-- Elbow curve for K selection
+- Cluster summary tables with gradient styling
 
-- Cluster distribution bar charts
+- Distribution histograms for behavioral analysis
 
-- Cluster comparison charts (user input vs. cluster average)
-
-- Campaign performance dashboards
-
-- Cluster profile summaries with expandable descriptions
+- Cluster-level statistics for business insight
 
 🧭 **Workflow**
 
 Customer Data
 → Data Cleaning & Feature Engineering
-→ Exploratory Data Analysis (EDA)
 → Feature Scaling
 → Elbow Method (WCSS)
 → K-Means Clustering
-→ Cluster Profiling
-→ Streamlit Dashboard & Prediction System
+→ Cluster Summary & Profiling
+→ Streamlit Dashboard
+→ Real-Time Cluster Prediction
 
 💼 **Deliverables**
 
@@ -118,19 +128,16 @@ Customer Data
 
 - Interactive Streamlit dashboard
 
-- Customer cluster prediction tool
+- Real-time customer cluster prediction system
 
-- Cluster profile insights for marketing teams
+- Cluster summary insights for marketing strategy
 
 🔮 **Future Improvements**
 
-- Evaluate Silhouette, Calinski-Harabasz, and Davies-Bouldin scores
+- Add campaign response and online behavior features
 
-- Experiment with GMM or DBSCAN for non-spherical clusters
+- Replace CSV authentication with a database-backed system
 
-- Add online behavior and seasonal features
+- Deploy dashboard to Streamlit Cloud or AWS
 
-- Integrate a database-backed authentication system
-
-- Deploy dashboard to cloud (Streamlit Cloud / AWS)
-
+- Implement cluster-based marketing recommendations
